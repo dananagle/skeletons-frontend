@@ -1,0 +1,14 @@
+<div class="row">
+     <div class="page-header col-xs-8 col-xs-offset-2">
+       <h1>Sign In!</h1>
+     </div>
+   </div>
+   <div class="row">
+     <%= simple_form_for :session, url: :auth  do |f| %>
+       <div class= "col-xs-8 col-xs-offset-2">
+         <%= f.input :email, label:false, placeholder: "Email"%>
+         <%= f.input :password, label:false, placeholder:"Password" %>
+         <%= f.submit "Log In", class: "btn btn-primary" %>
+       </div>
+     <% end %>
+   </div>

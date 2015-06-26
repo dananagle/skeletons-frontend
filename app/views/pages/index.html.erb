@@ -1,0 +1,13 @@
+<div>
+  <% if @user_name.nil? %>
+    <%= link_to "Sign In", auth_path %>
+  <% else %>
+    <%= link_to "Sign Out", sign_out_path, method: :delete %>
+  <% end %>
+</div>
+
+<div>
+    <%@skeletons.each do |skeleton|%>
+    <li><%= skeleton["content"] %><p>Posted by<%= skeleton["user"]["user_name"] %></p></li>
+    <% end %>
+</div>
